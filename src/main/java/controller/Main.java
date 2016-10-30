@@ -5,6 +5,8 @@
  */
 package controller;
 
+import views.EmployeeCRUD;
+
 /**
  *
  * @author fernando
@@ -16,6 +18,10 @@ public class Main {
      */
     public static void main(String[] args) {
         System.out.println("Hello World"); //esto puse yo Isaias
+        
+
+        EmployeeCRUD v = new EmployeeCRUD();
+        v.setVisible(true);
         
     }
     

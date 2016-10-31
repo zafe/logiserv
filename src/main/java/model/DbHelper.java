@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controller;
+package model;
 
 import views.EmployeeCRUD;
 
@@ -11,6 +11,7 @@ import views.EmployeeCRUD;
  *
  * @author fernando
  */
+<<<<<<< HEAD:src/main/java/controller/Main.java
 public class Main {
 
     /**
@@ -24,5 +25,8 @@ public class Main {
         v.setVisible(true);
         
     }
+=======
+public class DbHelper {
+>>>>>>> refs/remotes/zafe/master:src/main/java/model/DbHelper.java
     
 }

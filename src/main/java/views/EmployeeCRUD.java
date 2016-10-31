@@ -6,6 +6,8 @@
 package views;
 
 import views.cruds.EmployC;
+import views.cruds.EmployM;
+import views.cruds.EmploySe;
 
 /**
  *
@@ -31,7 +33,7 @@ public class EmployeeCRUD extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         newButton = new javax.swing.JButton();
-        modButton = new javax.swing.JButton();
+        editButton = new javax.swing.JButton();
         searchButton = new javax.swing.JButton();
         deleteButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -56,11 +58,21 @@ public class EmployeeCRUD extends javax.swing.JFrame {
             }
         });
 
-        modButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/edit.png"))); // NOI18N
-        modButton.setText("Modificar");
+        editButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/edit.png"))); // NOI18N
+        editButton.setText("Modificar");
+        editButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editButtonActionPerformed(evt);
+            }
+        });
 
         searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/search.png"))); // NOI18N
         searchButton.setText("Buscar");
+        searchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchButtonActionPerformed(evt);
+            }
+        });
 
         deleteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/delete.png"))); // NOI18N
         deleteButton.setText("Eliminar");
@@ -73,7 +85,7 @@ public class EmployeeCRUD extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(newButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(modButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(editButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -90,7 +102,7 @@ public class EmployeeCRUD extends javax.swing.JFrame {
                         .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(newButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(modButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(editButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -168,6 +180,16 @@ public class EmployeeCRUD extends javax.swing.JFrame {
         crear.setVisible(true);
     }//GEN-LAST:event_newButtonActionPerformed
 
+    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
+        EmployM ed = new EmployM();
+        ed.setVisible(true);
+    }//GEN-LAST:event_editButtonActionPerformed
+
+    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+       EmploySe busc = new EmploySe();
+       busc.setVisible(true);
+    }//GEN-LAST:event_searchButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -206,6 +228,7 @@ public class EmployeeCRUD extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton deleteButton;
+    private javax.swing.JButton editButton;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
@@ -217,7 +240,6 @@ public class EmployeeCRUD extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JButton modButton;
     private javax.swing.JButton newButton;
     private javax.swing.JButton searchButton;
     // End of variables declaration//GEN-END:variables
